@@ -1,8 +1,34 @@
-.topBar__top {
-  justify-content: space-between;
-  display: flex;
+.header {
+  background-color: #007D83;
 }
 
-.topBar__under {
-  margin-right: 10px;
+.icon {
+  position: absolute;
+  left: 10px;
+  font-size: 30px;
+  z-index: 1;
 }
+
+.topBar {
+  margin: 5px 10px;
+  span {
+    margin: 0 10px;
+    width: 200px;
+  }
+}
+
+.topMenu {
+  margin: auto;
+  span {
+    margin: 10px;
+  }
+}
+
+.topMenuRow {
+  height: 60px;
+}
+
+.sideImg {
+  padding: 0px;
+}
+// :host /deep/ .ngb-carousel .ng-template .img { width: 100% }
