@@ -28,7 +28,54 @@
     </div>
   </div>
   <div class="row">
+    <div class="runMsgArea">
+      <div class="runMsg">
+        <div class="icon_runMsg"></div>
+        <div id="runMsgDiv">
+          <marquee data-show="true" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="3" style="font-size:14px;">
+            <table>
+              <tbody>
+                <tr>
+                  <td>
+                    <a data-id="3790">
+                      <span style="font-family:Microsoft JhengHei;font-size:18px;">
+                        <span style="font-size:17px;">
+                          <span style="font-size:16px;">
+                            <span style="font-size:16px;">
+                              <span style="font-size:16px;">
+                                <strong>
+                                  <span style="font-size:16px;"></span>
+                                </strong>
+                              </span>
+                            </span>
+                          </span>
+                        </span>
+                        <span style="font-size:17px;">
+                          <strong>註冊玩家超過百萬人見證，實拿久穩，最具實力的線上娛樂城，高達百萬超級彩金等您來拿！</strong>
+                        </span>
+                      </span>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </marquee>
+        </div>
+      </div>
+    </div>
     <div class="sideImg col-md-12">
+      <div class="customerServ">
+        <ul onclick="javascript:openNewWindowGetWidth(0)">
+          <li class="btn_CS_24h">
+            <span class="CS_T">在線客服</span>
+          </li>
+        </ul>
+        <ul id="aLine">
+          <li class="btn_CS_line">
+            <span id="spanLine" class="CS_T">Line客服</span>
+          </li>
+        </ul>
+      </div>
       <ngb-carousel *ngIf="sideDate" [showNavigationArrows]="showNavigationArrows">
         <ng-template ngbSlide *ngFor="let sideItem of sideDate">
           <img [src]="sideItem.src" style="width: 100%;max-height: 450px;">
