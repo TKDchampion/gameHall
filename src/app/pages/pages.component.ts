@@ -17,13 +17,13 @@ export class PagesComponent implements OnInit {
   ngOnInit() {
     this.sideDate = [
       {
-        id: 1, src: "https://www.layoutit.com/img/sports-q-c-1600-500-1.jpg"
+        id: 1, src: "https://www.kia168.com/images/banner03.jpg"
       },
       {
-        id: 2, src: "https://www.layoutit.com/img/sports-q-c-1600-500-2.jpg"
+        id: 2, src: "https://www.ts775.com.tw/upload/ad20150430154817-0.jpg"
       },
       {
-        id: 3, src: "https://www.layoutit.com/img/sports-q-c-1600-500-3.jpg"
+        id: 3, src: "https://ju777.com.tw/userfiles/images/20151125064357921.jpg"
       },
     ]
   }
