@@ -1,5 +1,7 @@
 .sideImg {
     padding: 0px;
+    width: calc(100% - 80px);
+    position: relative;
   }
   // :host /deep/ .ngb-carousel .ng-template .img { width: 100% }
   
@@ -11,7 +13,7 @@
   
   .runMsgArea {
     background-color: rgba(0,0,0,.7);
-    width: 100%;
+    width: calc(100% - 80px);
     height: 30px;
     position: absolute;
     z-index: 1;
@@ -47,9 +49,9 @@
     width: 80px;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
-    right: 0;
+    right: -80px;
     z-index: 2;
-    height: calc(100% - 30px);
+    height: 100%;
     bottom: 0;
   }
   
@@ -95,9 +97,13 @@
       left: 18px;
     }
   
-    :hover {
+    &:hover {
       img { 
         border: 3px solid #428bca;
+      }
+      .cardImg__text {
+        color: #428bca;
+        line-height: 50px;        
       }
     }
   }

@@ -1,11 +1,11 @@
 <div class="header row">
-    <div class="icon">ICON</div>
-    <div class="header col-md-12">
+    <div class="icon col-md-1">ICON</div>
+    <div class="header col-md-11">
         <div class="topBar row justify-content-end">
-            <button type="button" class="btn btn-warning">立即註冊</button>
-            <input type="text">
-            <input type="text">
-            <button type="button" class="btn btn-success">登入</button>
+            <button type="button" class="btn btn-warning btn-sm">立即註冊</button>
+            <input class="input" type="text" placeholder="請輸入帳號" />
+            <input class="input" type="text" placeholder="請輸入密碼" />
+            <button type="button" class="btn btn-success btn-sm">登入</button>
         </div>
         <div class="topBar row justify-content-end">
             <span>Name:</span>
@@ -13,16 +13,9 @@
         </div>
     </div>
 </div>
-<div class="topMenuRow row">
-    <div class="topMenu">
-        <span>首頁大廳</span>
-        <span>|</span>
-        <span>遊戲項目</span>
-        <span>|</span>
-        <span>合作計畫</span>
-        <span>|</span>
-        <span>聲明條文</span>
-        <span>|</span>
-        <span>關於我們</span>
+<div class="topMenuRow row justify-content-center align-items-center">
+    <div *ngFor="let menuItem of menuList;let i = index" class="col-md-0.5">
+        <span (click)="selectorMenu(menuItem)" class="topMenu__item" [ngClass]="{'active': menuItem.active}">{{menuItem.name}}</span>
+        <span *ngIf="menuList.length - 1 !== i">|</span>
     </div>
 </div>

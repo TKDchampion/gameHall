@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Menu } from './top-bar.model';
 
 @Component({
   selector: 'app-top-bar',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopBarComponent implements OnInit {
 
+  menuList = Menu;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  selectorMenu(menuItem) {
+    this.menuList.forEach(i => i.active = false);
+    menuItem.active = true;
+  }
 }
