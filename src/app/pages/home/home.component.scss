@@ -71,8 +71,11 @@
     }
   }
   
-  .cardrow .cardrow_Item {
-    margin: 80px 0;
+  .cardrow {
+    background-color: #e2e2e2;
+    .cardrow_Item {
+     margin: 80px 0;
+    }
   }
   
   .cardImg {

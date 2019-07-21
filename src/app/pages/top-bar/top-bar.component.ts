@@ -14,6 +14,14 @@ export class TopBarComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.filterPath();
+  }
+
+  filterPath() {
+    this.menuList.forEach(i => {
+      i.active = false;
+      if (location.pathname === `/pages/${i.key}`) { i.active = true; }
+    });
   }
 
   selectorMenu(menuItem) {
