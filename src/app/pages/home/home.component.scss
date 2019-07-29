@@ -3,14 +3,13 @@
     width: calc(100% - 80px);
     position: relative;
   }
-  // :host /deep/ .ngb-carousel .ng-template .img { width: 100% }
-  
+
   .marquee {
     position: absolute;
     z-index: 1;
     width: 100%;
   }
-  
+
   .runMsgArea {
     background-color: rgba(0,0,0,.7);
     width: calc(100% - 80px);
@@ -18,13 +17,13 @@
     position: absolute;
     z-index: 1;
   }
-  
+
   .runMsg {
     height: 100%;
     display: block;
     margin: 0 auto;
   }
-  
+
   .icon_runMsg {
     width: 45px;
     height: 100%;
@@ -32,7 +31,7 @@
     background-size: 21px;
     float: left;
   }
-  
+
   .runMsg marquee {
     float: left;
     width: calc(100% - 45px);
@@ -42,7 +41,7 @@
     height: 45px;
     overflow: hidden;
   }
-  
+
   .customerServ {
     display: table;
     table-layout: fixed;
@@ -54,11 +53,11 @@
     height: 100%;
     bottom: 0;
   }
-  
+
   .customerServ ul {
     display: table-row;
   }
-  
+
   .customerServ li {
     display: table-cell;
     position: relative;
@@ -70,14 +69,14 @@
       color: #fff;
     }
   }
-  
+
   .cardrow {
     background-color: #e2e2e2;
     .cardrow_Item {
-     margin: 80px 0;
+      margin: 80px 0;
     }
   }
-  
+
   .cardImg {
     width: 300px;
     height: 180px;
@@ -99,15 +98,19 @@
       transition: all ease 0.3s;
       left: 18px;
     }
-  
+
     &:hover {
-      img { 
+      img {
         border: 3px solid #428bca;
       }
       .cardImg__text {
         color: #428bca;
-        line-height: 50px;        
+        line-height: 50px;
       }
     }
   }
-  
+
+  @media screen and (max-width:992px) {
+    .cardrow .cardrow_Item {margin: 10px 0;}
+  }
+
