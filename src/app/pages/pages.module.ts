@@ -6,13 +6,17 @@ import { PagesComponent } from './pages.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { FooterComponent } from './footer/footer.component';
+import { ModalComponent } from './top-bar/component/modal/modal.component';
 
 @NgModule({
-  declarations: [PagesComponent, TopBarComponent, FooterComponent],
+  declarations: [PagesComponent, TopBarComponent, FooterComponent, ModalComponent],
   imports: [
     CommonModule,
     PagesRoutingModule,
     NgbModule
+  ],
+  entryComponents: [
+    ModalComponent
   ]
 })
 export class PagesModule { }

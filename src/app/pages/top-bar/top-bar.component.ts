@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Menu } from './top-bar.model';
 import { Router } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './component/modal/modal.component';
 
 @Component({
   selector: 'app-top-bar',
@@ -11,7 +13,7 @@ export class TopBarComponent implements OnInit {
 
   menuList = Menu;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private modalService: NgbModal) { }
 
   ngOnInit() {
     this.filterPath();
@@ -28,5 +30,10 @@ export class TopBarComponent implements OnInit {
     this.menuList.forEach(i => i.active = false);
     menuItem.active = true;
     this.router.navigate([`pages/${menuItem.key}`]);
+  }
+
+  openModal() {
+    const modalRef = this.modalService.open(ModalComponent);
+    modalRef.componentInstance.name = 'World';
   }
 }
