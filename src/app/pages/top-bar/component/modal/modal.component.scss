@@ -1,0 +1,34 @@
+.modal-header {
+    background-color: #007D83;
+    color: #fff;
+}
+
+.modal-title {
+    margin: 0 169px;
+}
+
+.modal-body {
+    background-color: #e2e2e2;
+}
+
+.close {
+    color: #fff;
+}
+
+.modal-body-item {
+    width: 375px;
+    margin: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-submit {
+    width: 375px;
+    margin: 5px 40px;
+}
+
+.modal-body-item-border {
+    border: 0.5px #96a1ab solid;
+    width: 375px;
+    margin: 0 40px;
+}

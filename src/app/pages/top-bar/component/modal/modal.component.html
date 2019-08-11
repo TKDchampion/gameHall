@@ -1,12 +1,43 @@
 <div class="modal-header">
-    <h4 class="modal-title">Hi there!</h4>
-    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <h4 class="modal-title">加入會員</h4>
+    <label class="close" (click)="activeModal.dismiss('Cross click')">
         <span aria-hidden="true">&times;</span>
-    </button>
+    </label>
 </div>
 <div class="modal-body">
-    <p>Hello, {{name}}!</p>
+    <div class="modal-body-item">
+        <label>介紹人代碼</label>
+        <input type="text">
+    </div>
+    <div class="modal-body-item">
+        <label>帳號</label>
+        <input type="text">
+    </div>
+    <div class="modal-body-item">
+        <label>暱稱</label>
+        <input type="text">
+    </div>
+    <div class="modal-body-item">
+        <label>密碼</label>
+        <input type="text">
+    </div>
+    <div class="modal-body-item-border"></div>
+    <div class="modal-body-item">
+        <label>信箱</label>
+        <input type="text">
+    </div>
+    <div class="modal-body-item">
+        <label>驗證</label>
+        <input type="text">
+    </div>
+    <div class="modal-body-item-border"></div>
+    <div class="checkbox modal-body-item">
+        <label>
+            <input type="checkbox"> 我已年滿18歲，並同意投注相關規範及<a href="#">服務條款</a>
+        </label>
+    </div>
+    <button type="button" class="btn-primary btn-submit">確認</button>
 </div>
-<div class="modal-footer">
+<!-- <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
-</div>
+</div> -->
