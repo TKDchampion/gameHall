@@ -33,6 +33,10 @@ export class TopBarComponent implements OnInit {
     this.router.navigate([`pages/${menuItem.key}`]);
   }
 
+  goPersonal() {
+    this.router.navigate([`pages/personalInformation`]);
+  }
+
   openModal() {
     const modalRef = this.modalService.open(ModalComponent);
     modalRef.componentInstance.name = 'World';
