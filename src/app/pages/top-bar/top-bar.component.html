@@ -1,21 +1,23 @@
 <div class="header row">
     <div class="icon col-md-1">ICON</div>
     <div class="header col-md-11">
-        <div class="topBar row justify-content-end">
+        <div class="topBar row justify-content-end" *ngIf="!loginUI">
             <button type="button" class="btn btn-warning btn-sm" (click)="openModal()">立即註冊</button>
             <input class="input" type="text" placeholder="請輸入帳號" />
             <input class="input" type="text" placeholder="請輸入密碼" />
             <button type="button" class="btn btn-success btn-sm">登入</button>
         </div>
-        <div class="topBar row justify-content-end">
-            <span>Name:</span>
-            <span>Money:</span>
+        <div class="topBar row justify-content-end" *ngIf="loginUI">
+            <span>Name: as1219123</span>
+            <span>Money: $10000000</span>
+            <div class="accountIcon"></div>
         </div>
     </div>
 </div>
 <div class="topMenuRow row justify-content-center align-items-center">
     <div *ngFor="let menuItem of menuList;let i = index" class="col-md-0.5">
-        <span (click)="selectorMenu(menuItem)" class="topMenu__item" [ngClass]="{'active': menuItem.active}">{{menuItem.name}}</span>
+        <span (click)="selectorMenu(menuItem)" class="topMenu__item"
+            [ngClass]="{'active': menuItem.active}">{{menuItem.name}}</span>
         <span *ngIf="menuList.length - 1 !== i">|</span>
     </div>
 </div>

@@ -12,6 +12,7 @@ import { ModalComponent } from './component/modal/modal.component';
 export class TopBarComponent implements OnInit {
 
   menuList = Menu;
+  loginUI = true;
 
   constructor(private router: Router, private modalService: NgbModal) { }
 
