@@ -10,7 +10,8 @@ const routes: Routes = [
       { path: 'home', loadChildren: './home/home.module#HomeModule' },
       { path: 'statement', loadChildren: './statement/statement.module#StatementModule' },
       { path: 'about', loadChildren: './about/about.module#AboutModule' },
-      { path: 'plan', loadChildren: './plan/plan.module#PlanModule' }
+      { path: 'plan', loadChildren: './plan/plan.module#PlanModule' },
+      { path: 'personalInformation', loadChildren: './personal-information/personal-information.module#PersonalInformationModule' }
     ]
   }
 ];

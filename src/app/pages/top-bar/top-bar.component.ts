@@ -12,7 +12,7 @@ import { ModalComponent } from './component/modal/modal.component';
 export class TopBarComponent implements OnInit {
 
   menuList = Menu;
-  loginUI = true;
+  loginUI = false;
 
   constructor(private router: Router, private modalService: NgbModal) { }
 
@@ -36,5 +36,13 @@ export class TopBarComponent implements OnInit {
   openModal() {
     const modalRef = this.modalService.open(ModalComponent);
     modalRef.componentInstance.name = 'World';
+  }
+
+  login() {
+    this.loginUI = true;
+  }
+
+  logout() {
+    this.loginUI = false;
   }
 }

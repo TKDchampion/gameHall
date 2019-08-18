@@ -16,6 +16,7 @@
       overflow:hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+      color: #ffffff;
     }
   }
 
@@ -67,6 +68,14 @@
 
   .accountIcon {
     background: url(../../../assets/images/icon/account.svg) no-repeat 12px 50%;
-    width: 45px;
+    width: 35px;
     background-size: 21px;
+    cursor: pointer;
+  }
+
+  .logoutIcon {
+    background: url(../../../assets/images/icon/logout.svg) no-repeat 12px 50%;
+    width: 35px;
+    background-size: 21px;
+    cursor: pointer;
   }

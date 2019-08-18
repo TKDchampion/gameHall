@@ -5,12 +5,13 @@
             <button type="button" class="btn btn-warning btn-sm" (click)="openModal()">立即註冊</button>
             <input class="input" type="text" placeholder="請輸入帳號" />
             <input class="input" type="text" placeholder="請輸入密碼" />
-            <button type="button" class="btn btn-success btn-sm">登入</button>
+            <button type="button" class="btn btn-success btn-sm" (click)="login()">登入</button>
         </div>
         <div class="topBar row justify-content-end" *ngIf="loginUI">
             <span>Name: as1219123</span>
             <span>Money: $10000000</span>
             <div class="accountIcon"></div>
+            <div class="logoutIcon" (click)="logout()"></div>
         </div>
     </div>
 </div>
