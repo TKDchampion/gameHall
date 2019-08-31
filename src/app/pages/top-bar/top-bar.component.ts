@@ -1,3 +1,4 @@
+import { LoginService } from './../../services/login.service';
 import { Component, OnInit } from '@angular/core';
 import { Menu } from './top-bar.model';
 import { Router } from '@angular/router';
@@ -13,8 +14,14 @@ export class TopBarComponent implements OnInit {
 
   menuList = Menu;
   loginUI = false;
+  account = '';
+  password = '';
 
-  constructor(private router: Router, private modalService: NgbModal) { }
+  constructor(
+    private router: Router,
+    private modalService: NgbModal,
+    private loginService: LoginService
+  ) { }
 
   ngOnInit() {
     this.filterPath();
@@ -43,10 +50,24 @@ export class TopBarComponent implements OnInit {
   }
 
   login() {
-    this.loginUI = true;
+    const obj = {
+      account: this.account,
+      password: this.password
+    }
+
+    if (this.account.length > 0 && this.password.length > 0) {
+      this.loginService.login(obj).subscribe(resp => {
+        this.loginUI = true;
+      }, error => alert('帳號密碼錯誤'));
+    } else {
+      alert('帳號密碼不可以為空');
+    }
+
   }
 
   logout() {
     this.loginUI = false;
+    this.account = '';
+    this.password = '';
   }
 }
