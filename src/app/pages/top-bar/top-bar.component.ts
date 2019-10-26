@@ -4,6 +4,7 @@ import { Menu } from './top-bar.model';
 import { Router } from '@angular/router';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './component/modal/modal.component';
+import { Storage, JWTOptions } from 'ngx-paris';
 
 @Component({
   selector: 'app-top-bar',
@@ -20,7 +21,9 @@ export class TopBarComponent implements OnInit {
   constructor(
     private router: Router,
     private modalService: NgbModal,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private storage: Storage,
+    private option: JWTOptions
   ) { }
 
   ngOnInit() {
@@ -57,6 +60,7 @@ export class TopBarComponent implements OnInit {
 
     if (this.account.length > 0 && this.password.length > 0) {
       this.loginService.login(obj).subscribe(resp => {
+        this.storage.set(this.option.key, resp);
         this.loginUI = true;
       }, error => alert('帳號密碼錯誤'));
     } else {
@@ -69,5 +73,7 @@ export class TopBarComponent implements OnInit {
     this.loginUI = false;
     this.account = '';
     this.password = '';
+    this.storage.clear();
+    this.router.navigate([`pages/home`]);
   }
 }
